@@ -30,8 +30,9 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(googletest)
 
 # Test executable
+file(GLOB TEST_FILES "tests/*.cpp")
 enable_testing()
-add_executable(tests tests/test_fixed_queue.cpp)
+add_executable(tests ${TEST_FILES})
 target_include_directories(tests PRIVATE include)
 target_link_libraries(tests GTest::gtest_main)
 include(GoogleTest)
