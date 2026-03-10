@@ -21,7 +21,7 @@ class HeapBuffer {
 	    if (this == &other) return *this;
 
 	    delete[] data_;
-	    data_ = new uint8_t[other.size_];
+	    data_ = new T[other.size_];
 	    size_ = other.size_;
 	    std::memcpy(data_, other.data_, size_);
 	    return *this;
@@ -34,7 +34,7 @@ class HeapBuffer {
 	    }
 
 	HeapBuffer& operator=(HeapBuffer&& other) noexcept {
-	    if (this == other) return *this;
+	    if (this == &other) return *this;
 
 	    delete[] data_;
 	    data_ = other.data_;
