@@ -5,7 +5,7 @@
 template<typename T, size_t N>
 class HeapBuffer {
     public:
-	explicit HeapBuffer(T type, size_t size)
+	explicit HeapBuffer(size_t size)
 	    : data_(new T[size]), size_(size) {}
 
 	~HeapBuffer() {
