@@ -5,6 +5,7 @@
 template<typename T, size_t N>
 class ResourceBuffer {
     public:
+	ResourceBuffer() = default;
 
 	bool write(size_t index, const T& val) {
 	    if(index >= N) return false;

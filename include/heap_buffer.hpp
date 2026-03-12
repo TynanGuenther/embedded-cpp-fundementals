@@ -2,7 +2,7 @@
 #include <cstdint>
 #include <cstring>
 
-template<typename T, size_t N>
+template<typename T>
 class HeapBuffer {
     public:
 	explicit HeapBuffer(size_t size)
